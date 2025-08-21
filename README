@@ -1,0 +1,11 @@
+https://dev.to/ruanbekker/terraform-with-kvm-2d9e
+
+terraform apply -auto-approve
+$ terraform show -json | jq -r '.values.outputs.ip.value'
+192.168.122.213
+
+$ terraform output -json ip | jq -r '.'
+192.168.122.213
+
+$ curl -I http://192.168.122.213
+
