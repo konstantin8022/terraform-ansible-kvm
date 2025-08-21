@@ -1,6 +1,11 @@
 https://dev.to/ruanbekker/terraform-with-kvm-2d9e
 
 terraform apply -auto-approve
+virsh net-dhcp-leases default
+ssh ubuntu@IP "python3 --version"
+ssh ubuntu@IP "sudo apt install python3-pip -y "
+ssh ubuntu@IP "pip3 install six"
+
 $ terraform show -json | jq -r '.values.outputs.ip.value'
 192.168.122.213
 
